@@ -46,3 +46,52 @@ void    PhoneBook::add()
     index++;
     index %= 8;
 }
+
+void	PhoneBook::search()
+{
+	int			i;
+	std::string	index;
+
+	i = 0;
+	while (i < 8 && ArrOfCon[i].getFirstName() != "")
+	{
+		std::cout << "|" << std::setw(10);
+		std::cout << i << "|" << std::setw(10);
+		if (ArrOfCon[i].getFirstName().length() < 10)
+			std::cout << ArrOfCon[i].getFirstName();
+		else
+			std::cout << ArrOfCon[i].getFirstName().substr(0, 9) << ".";
+		std::cout << "|" << std::setw(10);
+		if (ArrOfCon[i].getLastName().length() < 10)
+			std::cout << ArrOfCon[i].getLastName();
+		else
+			std::cout << ArrOfCon[i].getLastName().substr(0, 9) << ".";
+		std::cout << "|" << std::setw(10);
+		if (ArrOfCon[i].getNickName().length() < 10)
+			std::cout << ArrOfCon[i].getNickName();
+		else
+			std::cout << ArrOfCon[i].getNickName().substr(0, 9) << ".";
+		std::cout << "|";
+		std::cout << std::endl;
+		i++;
+	}
+	std::cout << "Enter Index: ";
+	getline(std::cin, index);
+	i = std::atoi(index.c_str());
+	while (i < 0 || i > 7)
+	{
+		std::cout << "Index Must Be Between 0 And 7.\nEnter Index: ";
+		getline(std::cin, index);
+		i = std::atoi(index.c_str());
+	}
+	if (ArrOfCon[i].getFirstName() == "")
+		std::cout << "Contact Doesn't Exist\n";
+	else
+	{
+		std::cout << "FirstName: " << ArrOfCon[i].getFirstName() << std::endl;
+		std::cout << "LastName: " << ArrOfCon[i].getLastName() << std::endl;
+		std::cout << "NickName: " << ArrOfCon[i].getNickName() << std::endl;
+		std::cout << "PhoneNumber: " << ArrOfCon[i].getPhoneNumber() << std::endl;
+		std::cout << "DarkestSecret: " << ArrOfCon[i].getDarkestSecret() << std::endl;
+	}
+}

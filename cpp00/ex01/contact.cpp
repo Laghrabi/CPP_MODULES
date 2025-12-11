@@ -10,17 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "contact.hpp"
-
-Contact::Contact()
-{
-    FirstName = "";
-    LastName = "";
-    NickName = "";
-    PhoneNumber = "";
-    DarkestSecret = "";
-}
 
 std::string Contact::getFirstName()
 {

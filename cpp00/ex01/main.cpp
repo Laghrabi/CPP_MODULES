@@ -13,7 +13,6 @@ int main ()
 		else if (command == "SEARCH")
 			MyPhone.search();
 		else if (command == "EXIT")
-			MyPhone.exit();	
+			break ;	
 	}
 }
-

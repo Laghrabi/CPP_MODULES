@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PHONEBOOK_H
+#define PHONEBOOK_H
 
 #include "contact.hpp"
 
@@ -9,6 +10,7 @@ class PhoneBook {
 	public:
 		void	add();
 		void	search();
-		void	exit();
 		PhoneBook();
 };
+
+#endif
