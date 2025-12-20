@@ -1,6 +1,6 @@
 NAME = bank
-C++ = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
 FILES = tests.cpp Account.cpp \
@@ -12,7 +12,7 @@ OBJ = $(SRC:%.cpp=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
-	$(C++) $(FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -rf $(OBJ)

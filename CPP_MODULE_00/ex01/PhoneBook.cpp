@@ -12,35 +12,40 @@ void    PhoneBook::add()
     while (input == "")
     {
         std::cout << "Enter First Name: ";
-        getline(std::cin, input);
+        if (!getline(std::cin, input))
+			exit(0);
         ArrOfCon[index].setFirstName(input);
     }
     input = "";
     while (input == "")
     {
         std::cout << "Enter Last Name: ";
-        getline(std::cin, input);
+        if (!getline(std::cin, input))
+			exit(0);
         ArrOfCon[index].setLastName(input);
     }
     input = "";
     while (input == "")
     {
         std::cout << "Enter Nickname: ";
-        getline(std::cin, input);
+        if (!getline(std::cin, input))
+			exit(0);
         ArrOfCon[index].setNickName(input);
     }
     input = "";
     while (input == "")
     {
         std::cout << "Enter Phone Number: ";
-        getline(std::cin, input);
+        if (!getline(std::cin, input))
+			exit(0);
         ArrOfCon[index].setPhoneNumber(input);
     }
     input = "";
     while (input == "")
     {
         std::cout << "Enter Darkest Secret: ";
-        getline(std::cin, input);
+        if (!getline(std::cin, input))
+			exit(0);
         ArrOfCon[index].setDarkestSecret(input);
     }
     index++;
@@ -75,13 +80,20 @@ void	PhoneBook::search()
 		std::cout << std::endl;
 		i++;
 	}
-	std::cout << "Enter Index: ";
-	getline(std::cin, index);
+	index = "";
+	while (index[0] < 48 || index[0] > 57)
+	{
+		std::cout << "Enter Index: ";
+		if (!getline(std::cin, index))
+			exit(0);
+		std::cout << "Index must be a digit." << std::endl;
+	}
 	i = std::atoi(index.c_str());
 	while (i < 0 || i > 7)
 	{
 		std::cout << "Index Must Be Between 0 And 7.\nEnter Index: ";
-		getline(std::cin, index);
+		if (!getline(std::cin, index))
+			exit(0);
 		i = std::atoi(index.c_str());
 	}
 	if (ArrOfCon[i].getFirstName() == "")

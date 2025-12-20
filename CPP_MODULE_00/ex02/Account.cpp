@@ -6,12 +6,13 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 23:30:50 by claghrab          #+#    #+#             */
-/*   Updated: 2025/12/11 15:42:01 by claghrab         ###   ########.fr       */
+/*   Updated: 2025/12/20 15:46:30 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <iostream>
+#include <ctime>
 
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
@@ -28,7 +29,11 @@ void    Account::makeDeposit(int deposit)
 
 void Account::_displayTimestamp( void )
 {
-	std::cout << "[19920104_091532] ";
+	std::time_t now = std::time(NULL);
+    std::tm* local_now = std::localtime(&now);
+    char buffer[80];
+    std::strftime(buffer, 80, "[%Y%m%d_%H%M%S]", local_now);
+    std::cout << buffer << " ";
 }
 
 Account::~Account()

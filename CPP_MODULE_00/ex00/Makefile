@@ -1,5 +1,5 @@
 NAME = megaphone
-C++ = c++
+CXX = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
@@ -10,7 +10,7 @@ OBJ = $(SRC:%.cpp=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(C++) $(FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -rf $(OBJ)
