@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 15:55:16 by claghrab          #+#    #+#             */
-/*   Updated: 2025/12/31 16:15:42 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/03 17:23:09 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void    ScavTrap::attack(const std::string& target)
 {
 	if (EnergyPts > 0 && HitPts > 0)
 	{
-		std::cout << "ScarvTrap " << name << " attacks " << target << ", causing " << AtkDmg << " points of damage!" << std::endl;
+		std::cout << "ScavTrap " << name << " attacks " << target << ", causing " << AtkDmg << " points of damage!" << std::endl;
 		EnergyPts--;
 	}
 	else if (EnergyPts == 0)
