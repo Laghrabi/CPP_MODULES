@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 20:27:24 by claghrab          #+#    #+#             */
-/*   Updated: 2025/12/31 20:44:17 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/06 16:34:40 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ FragTrap::FragTrap(std::string name): ClapTrap(name)
 	AtkDmg = 30;
 }
 
-FragTrap::FragTrap(const FragTrap &copy): ClapTrap(copy)
+FragTrap::FragTrap(const FragTrap &other): ClapTrap(other)
 {
     std::cout << "FragTrap Copy Constructor called" << std::endl;
 }

@@ -1,4 +1,4 @@
-NAME = FragTrap
+NAME = DiamondTrap
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
