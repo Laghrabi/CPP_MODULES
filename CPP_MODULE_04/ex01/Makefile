@@ -3,9 +3,9 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
-FILES = main.cpp Cat.cpp  Dog.cpp WrongCat.cpp WrongAnimal.cpp Animal.cpp \
+FILES = main.cpp Cat.cpp  Dog.cpp WrongCat.cpp WrongAnimal.cpp Animal.cpp Brain.cpp
 
-HEADER = Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Animal.hpp \
+HEADER = Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Animal.hpp Brain.hpp
 
 OBJ = $(SRC:%.cpp=%.o)
 
