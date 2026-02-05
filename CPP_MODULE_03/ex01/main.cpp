@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 14:21:10 by claghrab          #+#    #+#             */
-/*   Updated: 2025/12/31 16:20:11 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/06 16:07:05 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int main()
 
         // Both 'copy' and 'assigned' should have 50 HP now.
         std::cout << "Testing copied object (Should have 50 HP):" << std::endl;
-        copy.attack("CloneTarget"); 
+        copy.attack("CloneTarget");
     }
     
     return 0;

@@ -1,11 +1,11 @@
-NAME = FragTrap
+NAME = Animal
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
-FILES = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+FILES = main.cpp Cat.cpp  Dog.cpp WrongCat.cpp WrongAnimal.cpp Animal.cpp Brain.cpp
 
-HEADER = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+HEADER = Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Animal.hpp Brain.hpp
 
 OBJ = $(SRC:%.cpp=%.o)
 

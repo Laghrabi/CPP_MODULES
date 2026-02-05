@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 16:14:42 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/03 17:22:11 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/04 14:51:10 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,4 @@ void	DiamondTrap::whoAmI(void)
     << " and i am originated from the ClapTrap named "
     << ClapTrap::name << "."
     << std::endl;
-}
-
-void DiamondTrap::debug() {
-    std::cout << "\n[DEBUG] Stats check:" << std::endl;
-    std::cout << "Name: " << this->name << std::endl;
-    std::cout << "HP: " << this->HitPts << " (Expected: 100)" << std::endl;
-    std::cout << "Energy: " << this->EnergyPts << " (Expected: 50)" << std::endl;
-    std::cout << "Damage: " << this->AtkDmg << " (Expected: 30)" << std::endl;
-    std::cout << "-----------------------\n" << std::endl;
 }

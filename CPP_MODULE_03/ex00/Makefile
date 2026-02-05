@@ -3,9 +3,9 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
-FILES = main.cpp ClapTrap.cpp \
+FILES = main.cpp ClapTrap.cpp
 
-HEADER = ClapTrap.hpp \
+HEADER = ClapTrap.hpp
 
 OBJ = $(SRC:%.cpp=%.o)
 

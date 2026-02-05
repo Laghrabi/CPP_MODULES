@@ -1,11 +1,11 @@
-NAME = FragTrap
+NAME = interface
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
-FILES = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+FILES = AMateria.cpp Cure.cpp main.cpp Character.cpp Ice.cpp MateriaSource.cpp
 
-HEADER = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+HEADER = ICharacter.hpp AMateria.hpp Cure.hpp Character.hpp Ice.hpp MateriaSource.hpp IMateriaSource.hpp
 
 OBJ = $(SRC:%.cpp=%.o)
 

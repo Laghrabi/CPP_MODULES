@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/31 14:33:40 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/06 16:37:03 by claghrab         ###   ########.fr       */
+/*   Created: 2026/01/08 17:26:11 by claghrab          #+#    #+#             */
+/*   Updated: 2026/01/08 22:04:08 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_H
-#define SCAVTRAP_H
+#ifndef AMATERIA_HPP
+#define AMATERIA_HPP
 
 #include <iostream>
-#include "ClapTrap.hpp"
+#include "ICharacter.hpp"
 
-// ScavTrap Class
-class	ScavTrap : public ClapTrap {
-		public:
-			ScavTrap();
-			ScavTrap(std::string name);
-        	ScavTrap(const ScavTrap& other);
-        	ScavTrap& operator= (const ScavTrap& other);
-        	~ScavTrap();
+// AMateria Class
+class	AMateria
+{
+	protected:
+		std::string	_type;
+	public:
+		AMateria(std::string const & type);
+		AMateria(const AMateria& other);
+		AMateria& operator=(const AMateria& other);
+		virtual ~AMateria();
+		
+		std::string	const & getType() const;
 
-        	void attack( const std::string& target );
-        	void guardGate( void );
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target);
 };
 
 #endif
