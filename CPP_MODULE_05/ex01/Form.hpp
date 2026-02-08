@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 02:49:54 by claghrab          #+#    #+#             */
-/*   Updated: 2026/02/08 22:36:58 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/02/08 22:49:48 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class   Form {
         private:
             const std::string   _name;
             bool                _signed;
-            unsigned int                 _GradeToSign;
-            unsigned int                 _GradeToExecute;
+            const unsigned int                 _GradeToSign;
+            const unsigned int                 _GradeToExecute;
         public:
             Form();
             Form(std::string name, int GradeToSign, int GradeToExecute);
@@ -36,7 +36,7 @@ class   Form {
             bool    getSigned() const;
             int     getGradeToSign() const;
             int     getGradeToExecute() const;
-            void    beSigned(Bureaucrat& src);
+            void    beSigned(const Bureaucrat& src);
             
             class GradeTooLowException: public std::exception {
 		        virtual	const char* what() const throw();
@@ -46,6 +46,6 @@ class   Form {
 		    };
 };
 
-std::ostream&   operator<<( std::ostream& os, Form& form );
+std::ostream&   operator<<( std::ostream& os, const Form& form);
 
 #endif

@@ -6,18 +6,18 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 03:32:43 by claghrab          #+#    #+#             */
-/*   Updated: 2026/02/08 22:23:34 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/02/08 22:49:58 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form() : _name("default"), _GradeToSign(), _GradeToExecute() {}
+Form::Form() : _name("default"), _GradeToSign(150), _GradeToExecute(150) {}
 
 Form::Form(std::string name, int GradeToSign, int GradeToExecute) : _name(name),
             _GradeToSign(GradeToSign), _GradeToExecute(GradeToExecute)
 {
-    if (GradeToSign == 0 || GradeToExecute == 0)
+    if (GradeToSign < 1 || GradeToExecute < 1)
 		throw Form::GradeTooHighException();
 	if ( GradeToSign > 150 || GradeToExecute > 150)
 		throw Form::GradeTooLowException();
@@ -55,7 +55,7 @@ int Form::getGradeToExecute() const
 {
     return (_GradeToExecute);
 }
-void		Form::beSigned( Bureaucrat & src )
+void		Form::beSigned(const Bureaucrat & src )
 {
 	if (src.getGrade() > this->_GradeToSign)
 		throw  Form::GradeTooLowException();
@@ -72,7 +72,7 @@ const char* Form::GradeTooLowException::what() const throw()
     return ("Grade is too low! Minimum is 150.");
 }
 
-std::ostream& operator<<(std::ostream& os, Form& form)
+std::ostream& operator<<(std::ostream& os, const Form& form)
 {
     os << "Form " << form.getName() 
        << ", signed: " << (form.getSigned() ? "yes" : "no")
