@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 13:33:37 by claghrab          #+#    #+#             */
-/*   Updated: 2026/04/16 16:12:54 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/04/17 12:08:48 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <vector>
 # include <exception>
 # include <climits>
+# include <cstdlib>
+# include <ctime>
 
 // Span Class
 class	Span {
@@ -34,6 +36,8 @@ class	Span {
 		void			addNumber(int n);
 		unsigned int	shortestSpan();
 		unsigned int	longestSpan();
+		template <typename InputIterator>
+		void    addNumbers(InputIterator begin, InputIterator end);
 		
 		class SpanFullException : public std::exception {
 			virtual const char* what() const throw() {
@@ -46,6 +50,20 @@ class	Span {
 				return ("Error: Not enough elements to find a span.");
 			}
 		};
+		
+		class	CapacityExceededException : public std::exception {
+			virtual const char* what() const throw() {
+				return ("Error: Adding these numbers exceeds the maximum capacity of the Span.");
+			}
+		};
 };
+
+template <typename InputIterator>
+void    Span::addNumbers(InputIterator begin, InputIterator end)
+{
+	if (_myVector.size() + std::distance(begin, end) > _N)
+		throw Span::CapacityExceededException();
+	_myVector.insert(_myVector.end(), begin, end);
+}
 
 #endif

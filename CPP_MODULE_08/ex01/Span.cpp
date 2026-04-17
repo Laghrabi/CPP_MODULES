@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 13:55:27 by claghrab          #+#    #+#             */
-/*   Updated: 2026/04/17 09:04:42 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/04/17 12:16:07 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ unsigned int	Span::longestSpan()
 unsigned int	Span::shortestSpan()
 {
 	unsigned int				minSpan;
+	unsigned int				currentGap;
 	std::vector<int>::iterator	it;
 	
 	if (_myVector.size() <= 1)
@@ -68,8 +69,9 @@ unsigned int	Span::shortestSpan()
 
 	for (it = _myVector.begin(); it != _myVector.end() - 1; ++it)
 	{
-		if ((*(it + 1) - *it) < minSpan)
-			minSpan = (*(it + 1) - *it);
+		currentGap = static_cast<unsigned int>(*(it + 1) - *it);
+		if (currentGap < minSpan)
+			minSpan = currentGap;
 	}
 	return (minSpan);
 }
