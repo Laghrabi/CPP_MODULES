@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 14:21:02 by claghrab          #+#    #+#             */
-/*   Updated: 2026/04/18 15:48:12 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/04/22 17:15:03 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,12 @@ class	MutantStack : public std::stack<T, Container> {
 		~MutantStack();
 	
 		typedef typename Container::iterator iterator;
+		typedef typename Container::reverse_iterator reverse_iterator;
 		
-		typename Container::iterator begin();
-		typename Container::iterator end();
+		typename Container::iterator				begin();
+		typename Container::iterator				end();
+		typename Container::reverse_iterator		rbegin();
+		typename Container::reverse_iterator		rend();
 };
 
 # include "MutantStack.tpp"

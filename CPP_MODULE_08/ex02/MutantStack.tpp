@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 14:46:58 by claghrab          #+#    #+#             */
-/*   Updated: 2026/04/18 15:40:43 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/04/22 17:17:02 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,16 @@ template <typename T, typename Container>
 typename Container::iterator MutantStack<T, Container>::end()
 {
     return (this->c.end());
+}
+
+template <typename T, typename Container>
+typename Container::reverse_iterator MutantStack<T, Container>::rbegin()
+{
+    return (this->c.rbegin());
+}
+
+template <typename T, typename Container>
+typename Container::reverse_iterator MutantStack<T, Container>::rend()
+{
+    return (this->c.rend());
 }
