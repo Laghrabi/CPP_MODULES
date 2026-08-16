@@ -25,7 +25,6 @@ class BitcoinExchange {
 
         void loadDatabase(const std::string& databaseFile);
         void processInput(const std::string& inputFile);
-        void printError(const std::string message, std::ifstream& file, bool close) const;
 };
 
 #endif
