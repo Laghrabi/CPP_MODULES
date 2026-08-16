@@ -6,41 +6,15 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:28:48 by claghrab          #+#    #+#             */
-/*   Updated: 2026/04/14 18:06:39 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/08/15 14:24:56 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
 #include "easyfind.tpp"
-
-// int main ()
-// {
-//     try {
-//         std::vector<int> v;
-//         v.push_back(1);
-//         v.push_back(2);
-//         v.push_back(3);
-//         easyfind(v, 42);
-//     }
-//     catch (std::exception &e) {
-//         std::cout << e.what() << std::endl;
-//     }
-//     try {
-//         std::vector<int> v;
-//         v.push_back(1);
-//         v.push_back(2);
-//         v.push_back(3);
-//         easyfind(v, 42);
-//     }
-//     catch (std::exception &e) {
-//         std::cout << e.what() << std::endl;
-//     }
-// }
-
-#include <iostream>
 #include <vector>
 #include <list>
-#include "easyfind.hpp"
+
 
 int main() {
     std::cout << "--- Testing with std::vector ---" << std::endl;

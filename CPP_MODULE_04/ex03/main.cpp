@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 21:31:36 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/08 21:54:06 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/09 15:59:19 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,53 +41,37 @@ void testSubjectMain() {
 }
 
 void testDeepCopy() {
-    std::cout << "\n=== 2. DEEP COPY & MEMORY TEST ===" << std::endl;
-    
-    // 1. Setup the Factory
-    // Create the source and teach it the "templates" for Ice and Cure.
-    MateriaSource* src = new MateriaSource();
+    std::cout << "=== 1. Setup Source (Magic Shop) ===" << std::endl;
+    IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
 
-    // 2. Create the Original Character
-    Character* bob = new Character("Bob");
+    std::cout << "\n=== 2. Create Character (Me) ===" << std::endl;
+    ICharacter* me = new Character("me");
+
+    std::cout << "\n=== 3. Equip Items ===" << std::endl;
+    AMateria* tmp;
     
-    AMateria* originalIce = src->createMateria("ice");
-    bob->equip(originalIce);
+    tmp = src->createMateria("ice");
+    me->equip(tmp);
     
-    // 4. Test Copy Constructor (The Core Test)
-    Character* bobCopy = new Character(*bob);
+    tmp = src->createMateria("cure");
+    me->equip(tmp);
 
-    // 5. Verify Both Have Items
-    std::cout << "Original Bob uses item 0:" << std::endl;
-    bob->use(0, *bobCopy); // Should print "shoots an ice bolt"
-
-    std::cout << "Copy Bob uses item 0:" << std::endl;
-    bobCopy->use(0, *bob); // Should print "shoots an ice bolt"
-
-    // 6. Modify the Original (Test Independence)
-    std::cout << "Unequipping slot 0 from Original Bob..." << std::endl;
-    bob->unequip(0); 
+    std::cout << "\n=== 4. Use Items on Bob ===" << std::endl;
+    ICharacter* bob = new Character("bob");
     
-    // 7. Manual Cleanup (Zero Leaks)
-    delete originalIce;
+    me->use(0, *bob); // Should print: * shoots an ice bolt at bob *
+    me->use(1, *bob); // Should print: * heals bob's wounds *
 
-    // 8. Verify Original is Empty
-    std::cout << "Original Bob tries to use item 0 (Should do nothing):" << std::endl;
-    bob->use(0, *bobCopy); 
-
-    // 9. PROOF OF DEEP COPY
-    std::cout << "Copy Bob uses item 0 (Should still work - Deep Copy):" << std::endl;
-    bobCopy->use(0, *bob); 
-
-    // 10. Clean Up
+    std::cout << "\n=== 5. Cleanup ===" << std::endl;
     delete bob;
-    delete bobCopy;
+    delete me;
     delete src;
 }
 
 int main() {
-    testSubjectMain();
+    //testSubjectMain();
     testDeepCopy();
     return 0;
 }

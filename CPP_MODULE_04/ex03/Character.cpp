@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 18:44:50 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/08 20:42:32 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/09 15:30:26 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Character::Character()
 {
-    std::cout << "Character default constructor called" << std::endl;
+    // std::cout << "Character default constructor called" << std::endl;
     _name = "default";
     for (int i = 0; i < 4; i++)
         _inventory[i] = NULL;
@@ -23,7 +23,7 @@ Character::Character()
 Character::Character(std::string const & name)
 {
     _name = name;
-    std::cout << "Character " << _name << " created" << std::endl;
+    // std::cout << "Character " << _name << " created" << std::endl;
     for (int i = 0; i < 4; i++)
         _inventory[i] = NULL;
 }
@@ -31,7 +31,7 @@ Character::Character(std::string const & name)
 
 Character::Character(Character const & other)
 {
-    std::cout << "Character Copy Constructor called" << std::endl;
+    // std::cout << "Character Copy Constructor called" << std::endl;
     _name = other._name;
     for (int i = 0; i < 4; i++)
     {
@@ -44,7 +44,7 @@ Character::Character(Character const & other)
 
 Character& Character::operator=(Character const & other)
 {
-    std::cout << "Character Assignation operator called" << std::endl;
+    // std::cout << "Character Assignation operator called" << std::endl;
     if (this != &other)
     {
         _name = other._name;
@@ -67,7 +67,7 @@ Character& Character::operator=(Character const & other)
 
 Character::~Character()
 {
-    std::cout << "Character " << _name << " destroyed" << std::endl;
+    //std::cout << "Character " << _name << " destroyed" << std::endl;
      for (int i = 0; i < 4; i++)
         {
             if (_inventory[i])

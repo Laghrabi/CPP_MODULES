@@ -6,12 +6,12 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 01:17:11 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/06 21:43:52 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/09 16:03:43 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#ifndef DOG_HPP
+#define DOG_HPP
 
 #include "Animal.hpp"
 #include "Brain.hpp"

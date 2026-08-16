@@ -6,12 +6,12 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 01:37:04 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/06 02:06:16 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/09 16:02:32 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_H
-#define WRONGANIMAL_H
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
 #include <iostream>
 #include <string>

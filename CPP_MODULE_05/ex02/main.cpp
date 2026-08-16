@@ -6,13 +6,13 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 16:58:15 by claghrab          #+#    #+#             */
-/*   Updated: 2026/02/13 16:58:24 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/07/30 23:46:36 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cstdlib> // for srand
-#include <ctime>   // for time
+#include <cstdlib>
+#include <ctime>
 #include "Bureaucrat.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
@@ -21,7 +21,6 @@
 
 int main()
 {
-    // Seed the random number generator for Robotomy
     std::srand(std::time(NULL));
 
     // --------------------------------------------------------------------------

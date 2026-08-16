@@ -3,9 +3,9 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
-FILES = main.cpp Bureaucrat.cpp AForm.cpp  ShrubberyCreationForm.cpp  PresidentialPardonForm.cpp RobotomyRequestForm.cpp \
+FILES = main.cpp Bureaucrat.cpp AForm.cpp  ShrubberyCreationForm.cpp  PresidentialPardonForm.cpp RobotomyRequestForm.cpp
 
-HEADER = Bureaucrat.hpp AForm.hpp  ShrubberyCreationForm.hpp  PresidentialPardonForm.hpp RobotomyRequestForm.hpp \
+HEADER = Bureaucrat.hpp AForm.hpp  ShrubberyCreationForm.hpp  PresidentialPardonForm.hpp RobotomyRequestForm.hpp
 
 OBJ = $(SRC:%.cpp=%.o)
 

@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 03:32:43 by claghrab          #+#    #+#             */
-/*   Updated: 2026/02/08 22:49:58 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/07/30 23:14:48 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int Form::getGradeToExecute() const
 {
     return (_GradeToExecute);
 }
-void		Form::beSigned(const Bureaucrat & src )
+void		Form::beSigned(const Bureaucrat& src )
 {
 	if (src.getGrade() > this->_GradeToSign)
 		throw  Form::GradeTooLowException();

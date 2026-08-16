@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 18:04:14 by claghrab          #+#    #+#             */
-/*   Updated: 2026/03/14 23:30:17 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/08/13 14:32:12 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ int main()
     size_t intLen = sizeof(intArray) / sizeof(intArray[0]);
     
     std::cout << "Before: ";
-    ::iter(intArray, intLen, printInt);
+    iter(intArray, intLen, printInt);
     std::cout << std::endl;
 
-    ::iter(intArray, intLen, increment);
+    iter(intArray, intLen, increment);
 
     std::cout << "After:  ";
-    ::iter(intArray, intLen, printInt);
+    iter(intArray, intLen, printInt);
     std::cout << std::endl << std::endl;
 
 
@@ -51,7 +51,7 @@ int main()
     size_t constIntLen = sizeof(constIntArray) / sizeof(constIntArray[0]);
     
     std::cout << "Const Array: ";
-    ::iter(constIntArray, constIntLen, printInt);
+    iter(constIntArray, constIntLen, printInt);
     std::cout << std::endl << std::endl;
 
     std::cout << "--- Test 3: String array with a template function ---" << std::endl;
@@ -59,7 +59,7 @@ int main()
     size_t stringLen = sizeof(stringArray) / sizeof(stringArray[0]);
 
     std::cout << "Strings: ";
-    ::iter(stringArray, stringLen, printElement<std::string>); 
+    iter(stringArray, stringLen, printElement<std::string>); 
     std::cout << std::endl;
 
     return 0;
