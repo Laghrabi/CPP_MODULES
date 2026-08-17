@@ -3,9 +3,9 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
-FILES = main.cpp \
+FILES = main.cpp
 
-HEADER =  Array.hpp Array.tpp \
+HEADER =  Array.hpp Array.tpp
 
 OBJ = $(SRC:%.cpp=%.o)
 

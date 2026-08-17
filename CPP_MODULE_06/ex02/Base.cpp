@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 16:21:48 by claghrab          #+#    #+#             */
-/*   Updated: 2026/03/01 17:22:06 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/08/01 19:32:43 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,19 +57,19 @@ void    identify(Base* p)
 void identify(Base& p)
 {
     try {
-        dynamic_cast<A&>(p);
+        (void)dynamic_cast<A&>(p);
         std::cout << "A" << std::endl;
         return ;
     } catch (std::exception& e) {}
     
     try {
-        dynamic_cast<B&>(p);
+        (void)dynamic_cast<B&>(p);
         std::cout << "B" << std::endl;
         return ;
     } catch (std::exception& e) {}
     
     try {
-        dynamic_cast<C&>(p);
+        (void)dynamic_cast<C&>(p);
         std::cout << "C" << std::endl;
         return ;
     } catch (std::exception& e) {}

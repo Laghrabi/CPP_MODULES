@@ -6,12 +6,12 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 18:47:34 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/06 21:44:53 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/09 16:03:29 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_H
-#define BRAIN_H
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
 #include <iostream>
 #include <string>

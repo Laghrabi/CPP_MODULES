@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 14:23:30 by claghrab          #+#    #+#             */
-/*   Updated: 2026/03/23 19:05:24 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/07/31 01:37:32 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ typedef enum e_datatype
 
 t_datatype getDatatype(std::string &str);
 
-// ScalarConverter Class
 class   ScalarConverter {
         private:
             ScalarConverter();

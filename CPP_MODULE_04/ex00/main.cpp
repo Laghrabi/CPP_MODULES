@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 02:01:11 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/06 02:01:24 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/09 15:12:04 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,28 +83,6 @@ int main()
     
     std::cout << "Deleting WrongAnimal (wrongMeta)..." << std::endl;
     delete wrongMeta;
-
-    // ------------------------------------------------------------------
-    // TEST 4: Copy Constructor & Assignment Operator
-    // ------------------------------------------------------------------
-    printDivider("TEST 4: Canonical Form (Copy/Assign)");
-
-    std::cout << "[1] Create original Dog" << std::endl;
-    Dog originalDog;
-    
-    std::cout << "\n[2] Create copy using Copy Constructor" << std::endl;
-    Dog copyDog(originalDog);
-    
-    std::cout << "\n[3] Create distinct dog and assign" << std::endl;
-    Dog assignedDog;
-    assignedDog = originalDog;
-    
-    std::cout << "\n[4] Check sounds of copies" << std::endl;
-    std::cout << "Original: "; originalDog.makeSound();
-    std::cout << "Copy: "; copyDog.makeSound();
-    std::cout << "Assigned: "; assignedDog.makeSound();
-
-    std::cout << "\n[5] Destruction of stack objects follows..." << std::endl;
 
     return 0;
 }

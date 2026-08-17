@@ -3,9 +3,9 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
-FILES = main.cpp Base.cpp A.cpp B.cpp C.cpp \
+FILES = main.cpp Base.cpp A.cpp B.cpp C.cpp
 
-HEADER =  Base.hpp A.hpp B.hpp C.hpp \
+HEADER =  Base.hpp A.hpp B.hpp C.hpp
 
 OBJ = $(SRC:%.cpp=%.o)
 

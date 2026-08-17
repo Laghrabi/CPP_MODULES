@@ -6,12 +6,12 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 23:31:53 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/08 16:57:12 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/01/09 16:04:04 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-#define ANIMAL_H
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
 #include <iostream>
 #include <string>

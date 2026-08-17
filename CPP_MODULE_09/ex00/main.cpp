@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/06 01:44:04 by claghrab          #+#    #+#             */
-/*   Updated: 2026/01/09 16:04:59 by claghrab         ###   ########.fr       */
+/*   Created: 2026/08/19 17:05:37 by claghrab          #+#    #+#             */
+/*   Updated: 2026/08/19 17:06:03 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
+#include "BitcoinExchange.hpp"
 
-#include "WrongAnimal.hpp"
+int main(int argc, char **argv) {
+    if (argc != 2) {
+        std::cerr << "Error: could not open file." << std::endl;
+        return (1);
+    }
 
-// WrongCat Class
-class	WrongCat : public WrongAnimal {
-	public:
-		WrongCat();
-		WrongCat(const WrongCat& other);
-		WrongCat& operator=(const WrongCat& other);
-		~WrongCat();
+    BitcoinExchange btcEngine;
 
-		void	makeSound(void) const;
-};
+    btcEngine.loadDatabase("data.csv");
+    btcEngine.processInput(argv[1]);
 
-#endif
+    return (0);
+}

@@ -1,11 +1,11 @@
-NAME = Span
+NAME = Fixed
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
-FILES = main.cpp Span.cpp
+FILES = main.cpp Fixed.cpp \
 
-HEADER =  Span.hpp
+HEADER = Fixed.hpp \
 
 OBJ = $(SRC:%.cpp=%.o)
 
