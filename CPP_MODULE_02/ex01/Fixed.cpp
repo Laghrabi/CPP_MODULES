@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 13:37:34 by claghrab          #+#    #+#             */
-/*   Updated: 2025/12/26 15:13:58 by claghrab         ###   ########.fr       */
+/*   Updated: 2025/12/28 17:44:46 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ float	Fixed::toFloat(void) const
 	return ((float)_fixedPointValue / (float)(1 << _fractionalBits));
 }
 
-std::ostream & operator<<(std::ostream & o, Fixed const & Fixed)
+std::ostream& operator<<(std::ostream& o, Fixed const & Fixed)
 {
     o << Fixed.toFloat();
     return o;
