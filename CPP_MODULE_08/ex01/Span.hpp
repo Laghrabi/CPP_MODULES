@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 13:33:37 by claghrab          #+#    #+#             */
-/*   Updated: 2026/04/17 12:08:48 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/08/15 16:45:47 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 # include <cstdlib>
 # include <ctime>
 
-// Span Class
 class	Span {
 	private:
 		unsigned int _N;

@@ -3,9 +3,9 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
-FILES = main.cpp \
+FILES = main.cpp
 
-HEADER =  easyfind.hpp easyfind.tpp \
+HEADER =  easyfind.hpp easyfind.tpp
 
 OBJ = $(SRC:%.cpp=%.o)
 

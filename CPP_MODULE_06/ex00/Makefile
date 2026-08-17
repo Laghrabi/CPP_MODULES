@@ -3,9 +3,9 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = $(FILES)
 
-FILES = main.cpp  ScalarConverter.cpp validation.cpp \
+FILES = main.cpp  ScalarConverter.cpp validation.cpp
 
-HEADER =  ScalarConverter.hpp \
+HEADER =  ScalarConverter.hpp
 
 OBJ = $(SRC:%.cpp=%.o)
 
