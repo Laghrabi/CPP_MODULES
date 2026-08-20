@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/19 19:20:08 by claghrab          #+#    #+#             */
-/*   Updated: 2026/08/19 19:38:20 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/08/20 16:45:36 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <stack>
 #include <list>
 #include <string>
-#include <exception>
+#include <stdexcept>
 
 class RPN {
     private:
