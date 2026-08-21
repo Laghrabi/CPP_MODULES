@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 14:32:48 by claghrab          #+#    #+#             */
-/*   Updated: 2026/08/21 00:34:52 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/08/21 16:23:42 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 #include <iostream>
 #include <ctime>
 #include <iomanip>
+#include <cstdlib>
 
 #define INT_MAX 2147483647
 
@@ -86,7 +87,37 @@ void PmergeMe::mergeInsertSort(Container& sequence) {
 
     Container pending;
     for (size_t i = 0; i < winners.size(); ++i) {
-        
+        for (size_t j = 0; j < pairs.size(); ++j) {
+            if (winners[i] == pairs[j].first) {
+                pending.push_back(pairs[j].second);
+                pairs[j].first = -1;
+                break ;
+            }
+        }
+    }
+
+    if (hasStraggler)
+        pending.push_back(straggler);
+    
+    sequence = winners;
+    if (!sequence.empty())
+        sequence.insert(sequence.begin(), pending[0]);
+
+    size_t indexCount = 1;
+    size_t jacobIndex = 3;
+
+    while (indexCount < pending.size()) {
+        size_t jacobVal = getJacobsthal(jacobIndex);
+        size_t chunkEnd = std::min(jacobVal, pending.size());
+
+        for (size_t i = chunkEnd; i > indexCount; --i) {
+            int elementToInsert = pending[i - 1];
+            typename Container::iterator insertPos = std::lower_bound(sequence.begin(), sequence.end(), elementToInsert);
+            sequence.insert(insertPos, elementToInsert);
+        }
+
+        indexCount = chunkEnd;
+        jacobIndex++;
     }
 }
 

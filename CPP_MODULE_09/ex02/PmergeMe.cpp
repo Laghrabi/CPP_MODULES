@@ -6,7 +6,7 @@
 /*   By: claghrab <claghrab@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 14:32:51 by claghrab          #+#    #+#             */
-/*   Updated: 2026/08/20 18:56:58 by claghrab         ###   ########.fr       */
+/*   Updated: 2026/08/21 16:22:47 by claghrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void PmergeMe::processSequences(int ac, char **av) {
         return ;
     }
 
-    for (size_t i = 1; i < ac; ++i) {
+    for (int i = 1; i < ac; ++i) {
         std::string arg = av[i];
         
         if (arg.empty()) {
@@ -66,7 +66,7 @@ void PmergeMe::processSequences(int ac, char **av) {
         }
         
         char *endPtr;
-        long value = std::strtol(arg.c_str(), &endPtr, 10);
+        long value = strtol(arg.c_str(), &endPtr, 10);
 
         if (*endPtr != '\0' || value < 0 || value > INT_MAX) {
             std::cerr << "Error" << std::endl;
@@ -86,3 +86,20 @@ void PmergeMe::processSequences(int ac, char **av) {
     printSortTime("std::vector", _vectorSequence.size(), timeVector);
     printSortTime("std::deque", _dequeSequence.size(), timeDeque);
 }
+
+ size_t PmergeMe::getJacobsthal(size_t n) const {
+    if (n == 0) return (0);
+    if (n == 1) return (1);
+
+    size_t prev1 = 1;
+    size_t prev2, current;
+    current = prev2 = 0;
+
+    for (size_t i = 2; i <= n; ++i) {
+        current = prev1 + 2 * prev2;
+        prev1 = current;
+        prev2 = prev1;
+    }
+
+    return (current);
+ }
